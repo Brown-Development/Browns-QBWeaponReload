@@ -9,7 +9,7 @@ server_scripts {
     'code/server.lua'
 }
 shared_scripts {
-    'config.lua
+    'config.lua'
 }
 dependencies {
     'qb-weapons'
