@@ -20,10 +20,10 @@ QBCore.Functions.CreateCallback('browns_reload:GetAmount', function(source, cb, 
         ammo_type = 'snp_ammo'
     end
     if ammo_type ~= nil then 
-        has_ammo = exports['qb-inventory']:HasItem(src, tostring(ammo_type), 1)
+        has_ammo = exports[tostring(config.inventory)]:HasItem(src, tostring(ammo_type), 1)
     end
     if has_ammo then 
-        local ammo_items = exports['qb-inventory']:GetItemByName(src, tostring(ammo_type))
+        local ammo_items = exports[tostring(config.inventory)]:GetItemByName(src, tostring(ammo_type))
         ammo_amounts = ammo_items.amount 
     end
     cb(ammo_amounts, ammo_type)
