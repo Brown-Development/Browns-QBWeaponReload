@@ -9,6 +9,5 @@ server_scripts {
     'code/server.lua'
 }
 dependencies {
-    'qb-weapons',
-    'qb-inventory'
+    'qb-weapons'
 }
