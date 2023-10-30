@@ -1,5 +1,5 @@
 # Browns QB Reload Weapons by Brown Development
-
+# NOW WORKS WITH qb, ps, & lj inventory!!!
 # Preview Video: https://youtu.be/TLSnJvRJPEI
 
 
