@@ -29,7 +29,7 @@ AddEventHandler('inventory:client:UseWeapon', function(data)
     end
 end)
 
-RegisterCommand('browns_reload', function(source) -- Creating the reloading functionality 
+function ReloadWeapon() -- Creating the reloading functionality  
     local ped = PlayerPedId()
     if weaponData ~= nil and GetSelectedPedWeapon(ped) ~= `WEAPON_UNARMED` then 
         local weapons = GetSelectedPedWeapon(ped)
@@ -65,11 +65,11 @@ RegisterCommand('browns_reload', function(source) -- Creating the reloading func
             end, QBCore.Shared.Weapons[weapons]["ammotype"])
         end
     end
-end)
-
-function ReloadWeapon() -- the reload function to create an export
-    ExecuteCommand('browns_reload')
 end
+
+RegisterCommand('browns_reload', function(source) -- the reload function to create an export
+    ReloadWeapon()
+end)
 
 exports('ReloadWeapon', ReloadWeapon) -- export to use reload function in other scripts
 

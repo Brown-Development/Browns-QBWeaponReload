@@ -18,6 +18,8 @@ QBCore.Functions.CreateCallback('browns_reload:GetAmount', function(source, cb, 
         ammo_type = 'mg_ammo'
     elseif types == 'AMMO_SNIPER' then 
         ammo_type = 'snp_ammo'
+    elseif types == 'AMMO_EMPLAUNCHER' then 
+        ammo_type = 'emp_ammo'
     end
     if ammo_type ~= nil then 
         has_ammo = exports[tostring(config.inventory)]:HasItem(src, tostring(ammo_type), 1)
