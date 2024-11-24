@@ -16,8 +16,8 @@ local no_return = { -- List of weapons that dont take ammo (Cant Be Reloaded)
     {weapon = 'weapon_unarmed'}
 }
 
-RegisterNetEvent('inventory:client:UseWeapon') -- Add Event Handler to event that is triggered when player uses a weapon
-AddEventHandler('inventory:client:UseWeapon', function(data)
+RegisterNetEvent('qb-weapons:client:DrawWeapon') -- Add Event Handler to event that is triggered when player uses a weapon
+AddEventHandler('qb-weapons:client:DrawWeapon', function(data)
     local weaponName = tostring(data.name)
     for _, cant_reload in ipairs(no_return) do 
         if weaponName == tostring(cant_reload.weapon) then 
